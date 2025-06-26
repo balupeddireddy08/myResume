@@ -5,22 +5,22 @@ import { FaPython, FaDatabase, FaCloud, FaBrain, FaTools, FaCode, FaServer, FaNe
 const skillCategories = [
   {
     category: "Programming",
-    icon: <FaCode className="text-5xl text-blue-400" />,
+    icon: <FaCode className="text-5xl text-teal-400" />,
     skills: ["Python", "SQL", "C++", "C", "Java", "R"]
   },
   {
     category: "Frameworks",
-    icon: <FaBrain className="text-5xl text-purple-400" />,
+    icon: <FaBrain className="text-5xl text-emerald-400" />,
     skills: ["TensorFlow", "Keras", "PyTorch", "Scikit-learn", "Hugging Face", "LangChain", "Llamaindex", "FAISS", "OpenAI", "LangGraph", "LangSmith", "FastAPI", "LangFlow", "Streamlit", "Flask", "ChromaDB", "Pydantic", "AutoGPT"]
   },
   {
     category: "Tools",
-    icon: <FaTools className="text-5xl text-green-400" />,
+    icon: <FaTools className="text-5xl text-teal-400" />,
     skills: ["Jupyter Notebook", "GitHub", "Docker", "Tableau", "Power BI", "MLflow", "Data Version Control", "Microsoft Excel", "GitHub Actions"]
   },
   {
     category: "Databases & Cloud",
-    icon: <FaCloud className="text-5xl text-yellow-400" />,
+    icon: <FaCloud className="text-5xl text-emerald-400" />,
     skills: ["MySQL", "MongoDB", "Azure (OpenAI Platform, Document Intelligence, EC2, Machine Learning)", "AWS (S3, Lambda, EC2, VPC, CloudFront, SageMaker, API Gateway, Bedrock)"]
   }
 ];
@@ -51,7 +51,7 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-emerald-500">
             Technical Skills
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto transition-colors duration-300">
@@ -84,8 +84,8 @@ const Skills = () => {
                       className="bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 py-2 px-4 rounded-lg transition-colors duration-300"
                       whileHover={{ 
                         scale: 1.05, 
-                        backgroundColor: "rgba(59, 130, 246, 0.2)",
-                        color: "#3b82f6" 
+                        backgroundColor: "rgba(20, 184, 166, 0.2)",
+                        color: "#14b8a6" 
                       }}
                     >
                       {skill}

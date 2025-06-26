@@ -55,7 +55,7 @@ const Articles = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-emerald-500">
             Technical Articles
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto transition-colors duration-300">
@@ -92,7 +92,7 @@ const Articles = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white transition-colors duration-300">{article.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4 transition-colors duration-300">{article.description}</p>
-                <div className="flex items-center text-blue-600 dark:text-blue-400 transition-colors duration-300">
+                <div className="flex items-center text-teal-600 dark:text-teal-400 transition-colors duration-300">
                   <span>Read article</span>
                   <FaExternalLinkAlt className="ml-2 text-sm" />
                 </div>
@@ -106,7 +106,7 @@ const Articles = () => {
             href="https://medium.com/@balupeddireddy08"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-500 to-emerald-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

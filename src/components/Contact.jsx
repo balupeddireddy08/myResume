@@ -40,7 +40,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-emerald-500">
             Get In Touch
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto transition-colors duration-300">
@@ -60,17 +60,17 @@ const Contact = () => {
             <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white transition-colors duration-300">Contact Information</h3>
             <div className="space-y-6">
               <div className="flex items-center">
-                <FaEnvelope className="text-3xl text-blue-400 mr-4" />
+                <FaEnvelope className="text-3xl text-teal-400 mr-4" />
                 <div>
                   <h4 className="text-xl font-semibold text-gray-800 dark:text-white transition-colors duration-300">Email</h4>
-                  <a href="mailto:balagopalreddypeddireddy@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-300">
+                  <a href="mailto:balagopalreddypeddireddy@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-300 transition-colors duration-300">
                     balagopalreddypeddireddy@gmail.com
                   </a>
                 </div>
               </div>
               
               <div className="flex items-center">
-                <FaMapMarkerAlt className="text-3xl text-blue-400 mr-4" />
+                <FaMapMarkerAlt className="text-3xl text-teal-400 mr-4" />
                 <div>
                   <h4 className="text-xl font-semibold text-gray-800 dark:text-white transition-colors duration-300">Location</h4>
                   <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">Ohio, USA</p>

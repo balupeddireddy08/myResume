@@ -48,7 +48,7 @@ const ThemeToggle = () => {
       </span>
       <motion.button
         onClick={toggleTheme}
-        className={`relative w-12 h-6 rounded-full flex items-center transition-colors duration-300 focus:outline-none ${isDarkMode ? 'bg-blue-600' : 'bg-gray-300'}`}
+        className={`relative w-12 h-6 rounded-full flex items-center transition-colors duration-300 focus:outline-none ${isDarkMode ? 'bg-teal-600' : 'bg-gray-300'}`}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}

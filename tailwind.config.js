@@ -9,12 +9,12 @@ export default {
     extend: {
       colors: {
         primary: {
-          light: '#60a5fa', // blue-400
-          dark: '#3b82f6',  // blue-500
+          light: '#2dd4bf', // teal-400
+          dark: '#14b8a6',  // teal-500
         },
         secondary: {
-          light: '#a78bfa', // purple-400
-          dark: '#8b5cf6',  // purple-500
+          light: '#34d399', // emerald-400
+          dark: '#10b981',  // emerald-500
         },
         background: {
           light: '#f9fafb', // gray-50
