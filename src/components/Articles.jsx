@@ -2,30 +2,36 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaMedium, FaExternalLinkAlt } from 'react-icons/fa';
 
+// Import images
+import deepLearningImg from '../media/articles/Deep_Learning.png';
+import timeSeriesImg from '../media/articles/time_series.png';
+import venvFlaskImg from '../media/articles/venv_flask.png';
+import githubImg from '../media/articles/github.png';
+
 const articles = [
   {
-    title: "Building a RAG Chatbot with LangChain, Streamlit, and Gemini",
-    description: "A comprehensive guide to building a Retrieval-Augmented Generation chatbot that answers questions based on your documents.",
-    date: "April 2024",
-    link: "https://medium.com/@balupeddireddy08/building-a-rag-chatbot-with-langchain-streamlit-and-gemini-8c9e5d7a2e7d"
+    title: "A Short Journey To Deep Learning",
+    description: "Understanding Artificial Neural Network (ANN) With An Example…🫀",
+    link: "https://pub.towardsai.net/a-short-journey-to-deep-learning-396ddf02f57f",
+    image: deepLearningImg
   },
   {
-    title: "Building a GenAI Research Assistant with LangGraph",
-    description: "Learn how to create an AI-powered research assistant that streamlines the research process using LangGraph and multi-agent architecture.",
-    date: "March 2024",
-    link: "https://medium.com/@balupeddireddy08/building-a-genai-research-assistant-with-langgraph-a-step-by-step-guide-d5f4d24b4e5c"
+    title: "Forecast The Future With Time Series Analysis",
+    description: "A detailed explanation of univariate time series analysis with an example…✈",
+    link: "https://pub.towardsai.net/forecast-the-future-with-time-series-analysis-e7793368d879",
+    image: timeSeriesImg
   },
   {
-    title: "End-to-End AI Chatbot with LangGraph, FastAPI, and Streamlit",
-    description: "A step-by-step guide to building an end-to-end AI chatbot using LangGraph for orchestration, FastAPI for the backend, and Streamlit for the UI.",
-    date: "February 2024",
-    link: "https://medium.com/@balupeddireddy08/end-to-end-ai-chatbot-with-langgraph-fastapi-and-streamlit-ui-a-step-by-step-guide-a1bfb56d0e57"
+    title: "Create a Virtual Environment in Windows OS and Run a Flask Application Locally",
+    description: "Easily create a virtual world for your projects",
+    link: "https://pub.towardsai.net/how-to-run-a-flask-application-locally-by-using-a-virtual-environment-in-windows-os-509540e0e3dd",
+    image: venvFlaskImg
   },
   {
-    title: "Building and Deploying an AI Agent Chatbot with Docker",
-    description: "A comprehensive guide to building and deploying an end-to-end AI agent chatbot using Docker, with optimized PostgreSQL query management.",
-    date: "January 2024",
-    link: "https://medium.com/@balupeddireddy08/build-and-deploy-an-end-to-end-ai-agent-chatbot-with-docker-a-comprehensive-guide-9a1bfb56d0e57"
+    title: "Deploy a Static Website using Github",
+    description: "Make your website and share it publicly in no time.",
+    link: "https://pub.towardsai.net/how-to-deploy-a-static-website-using-github-58c9df22127",
+    image: githubImg
   }
 ];
 
@@ -80,21 +86,27 @@ const Articles = () => {
               variants={item}
             >
               <motion.div 
-                className="bg-gray-100 dark:bg-gray-800 rounded-xl p-8 h-full transition-colors duration-300"
+                className="bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden h-full transition-colors duration-300"
                 whileHover={{ 
                   y: -10, 
                   boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1)" 
                 }}
               >
-                <div className="flex items-center mb-4">
-                  <FaMedium className="text-gray-700 dark:text-gray-300 text-2xl mr-3 transition-colors duration-300" />
-                  <span className="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-300">{article.date}</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white transition-colors duration-300">{article.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4 transition-colors duration-300">{article.description}</p>
-                <div className="flex items-center text-teal-600 dark:text-teal-400 transition-colors duration-300">
-                  <span>Read article</span>
-                  <FaExternalLinkAlt className="ml-2 text-sm" />
+                <img 
+                  src={article.image} 
+                  alt={article.title} 
+                  className="w-full h-48 object-cover object-center"
+                />
+                <div className="p-6">
+                  <div className="flex items-center mb-4">
+                    <FaMedium className="text-gray-700 dark:text-gray-300 text-2xl mr-3 transition-colors duration-300" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white transition-colors duration-300">{article.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-4 transition-colors duration-300">{article.description}</p>
+                  <div className="flex items-center text-teal-600 dark:text-teal-400 transition-colors duration-300">
+                    <span>Read article</span>
+                    <FaExternalLinkAlt className="ml-2 text-sm" />
+                  </div>
                 </div>
               </motion.div>
             </motion.a>
