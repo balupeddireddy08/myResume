@@ -1,83 +1,160 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { FaCertificate, FaExternalLinkAlt, FaLinkedin } from 'react-icons/fa';
+import pcapCert from '../media/certificates/PCAP.png';
+import ai900Cert from '../media/certificates/AI_900.png';
+import dp900Cert from '../media/certificates/DP_900.png';
+import az900Cert from '../media/certificates/AZ_900.png';
+import tableauCert from '../media/certificates/Tableau.png';
+import pythonTsaCert from '../media/certificates/Python_TSA.png';
+import sqlCert from '../media/certificates/SQL_Bootcamp.png';
+import htmlCert from '../media/certificates/HTML_Javascript_Bootstrap.png';
+
+const certifications = [
+  {
+    title: "PCAP: Certified Associate in Python Programming",
+    organization: "Python Institute",
+    image: pcapCert,
+    link: "https://verify.openedg.org/?id=pyOA.vwau.F2Gi"
+  },
+  {
+    title: "Azure AI Fundamentals (AI-900)",
+    organization: "Microsoft",
+    image: ai900Cert,
+    link: "https://learn.microsoft.com/api/credentials/share/en-us/balapeddireddy-5867/50A7DBFDEA3917EF?sharingId=427619C5C86B435A"
+  },
+  {
+    title: "Azure Data Fundamentals (DP-900)",
+    organization: "Microsoft",
+    image: dp900Cert,
+    link: "https://learn.microsoft.com/api/credentials/share/en-us/balapeddireddy-5867/E90F7DEF4E6AA9EC?sharingId=427619C5C86B435A"
+  },
+  {
+    title: "Azure Fundamentals (AZ-900)",
+    organization: "Microsoft",
+    image: az900Cert,
+    link: "https://learn.microsoft.com/api/credentials/share/en-us/balapeddireddy-5867/9F1D6A9216671D4E?sharingId=427619C5C86B435A"
+  },
+  {
+    title: "Tableau Desktop Certified Associate",
+    organization: "Edureka",
+    image: tableauCert,
+    link: "https://www.edureka.co/certificates/mycertificate/c6ab957afcfe1669735f61f55563f49b"
+  },
+  {
+    title: "Python for Time Series Data Analysis",
+    organization: "Udemy",
+    image: pythonTsaCert,
+    link: "#"
+  },
+  {
+    title: "Complete SQL Bootcamp: Zero to Hero",
+    organization: "Udemy",
+    image: sqlCert,
+    link: "#"
+  },
+  {
+    title: "HTML, JavaScript, & Bootstrap",
+    organization: "Udemy",
+    image: htmlCert,
+    link: "#"
+  }
+];
 
 const Certifications = () => {
-  const certifications = [
-    {
-      title: "PCAP: Certified Associate in Python Programming Certification",
-      image: "/images/PCAP.png",
-      description: "- Course offered by Python Institute.",
-      link: "https://verify.openedg.org/?id=pyOA.vwau.F2Gi"
-    },
-    {
-      title: "Machine Learning",
-      image: "/images/img-2.png",
-      description: "an online non-credit course authorized by Stanford University and offered through Coursera.",
-      link: "#a"
-    },
-    {
-      title: "Tableau Desktop Certified Associate",
-      image: "/images/Tableau_Desktop_Certified_Associate.png",
-      description: "Course offered by Edureka.",
-      link: "https://www.edureka.co/certificates/mycertificate/c6ab957afcfe1669735f61f55563f49b"
-    },
-    {
-      title: "Programming, Datastructures and Algorithms Using Python",
-      image: "/images/img-3.png",
-      description: "offered by National Programme on Technology Enhanced Learning (NPTEL).",
-      link: "#a"
-    },
-    {
-      title: "Azure Fundamentals Certification (AZ-900)",
-      image: "/images/AZ-900.png",
-      description: "Course offered by Microsoft.",
-      link: "https://learn.microsoft.com/api/credentials/share/en-us/balapeddireddy-5867/9F1D6A9216671D4E?sharingId=427619C5C86B435A"
-    },
-    {
-      title: "Python for Time Series Data Analysis",
-      image: "/images/Python_TSA.png",
-      description: "Course offered by Udemy.",
-      link: "#a"
-    },
-    {
-      title: "Azure Data Fundamentals Certification (DP-900)",
-      image: "/images/DP-900.png",
-      description: "Course offered by Microsoft.",
-      link: "https://learn.microsoft.com/api/credentials/share/en-us/balapeddireddy-5867/E90F7DEF4E6AA9EC?sharingId=427619C5C86B435A"
-    },
-    {
-      title: "The Complete SQL Bootcamp: Go from Zero to Hero",
-      image: "/images/sql.png",
-      description: "Course offered by Udemy.",
-      link: "#a"
-    },
-    {
-      title: "Azure AI Fundamentals Certification (AI-900)",
-      image: "/images/AI-900.png",
-      description: "Course offered by Microsoft.",
-      link: "https://learn.microsoft.com/api/credentials/share/en-us/balapeddireddy-5867/50A7DBFDEA3917EF?sharingId=427619C5C86B435A"
-    },
-    {
-      title: "HTML, JavaScript, & Bootstrap Certification",
-      image: "/images/img-6.png",
-      description: "offered by Udemy.",
-      link: "#a"
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      }
     }
-  ];
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  };
 
   return (
-    <section>
-      <h2>Certifications</h2>
-      <div>
-        {certifications.map((cert, index) => (
-          <div key={index} style={{ backgroundImage: `url(${cert.image})` }}>
-            <div>
-              <div>
-                <h3><a href={cert.link} target="_blank" rel="noopener noreferrer">{cert.title}</a></h3>
-                <span>{cert.description}</span>
+    <section id="certifications" className="py-20 px-4 bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
+      <div className="container mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+            Professional Certifications
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto transition-colors duration-300">
+            Industry-recognized credentials that validate my expertise in data science, AI, and cloud technologies.
+          </p>
+        </motion.div>
+
+        <motion.div 
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          {certifications.map((cert, index) => (
+            <motion.div
+              key={index}
+              className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-xl"
+              variants={item}
+              whileHover={{ 
+                y: -10, 
+                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1)" 
+              }}
+            >
+              <div className="relative h-40 overflow-hidden">
+                <img 
+                  src={cert.image} 
+                  alt={cert.title} 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-70"></div>
+                <div className="absolute top-4 left-4 bg-blue-500 rounded-full p-2">
+                  <FaCertificate className="text-white text-xl" />
+                </div>
               </div>
-            </div>
-          </div>
-        ))}
+              
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{cert.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">{cert.organization}</p>
+                <motion.a 
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <FaExternalLinkAlt className="mr-2" /> View Certificate
+                </motion.a>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <div className="mt-12 text-center">
+          <motion.a
+            href="https://www.linkedin.com/in/bala-gopal-reddy-peddireddy/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <FaLinkedin className="mr-2" size={20} />
+            Explore More Certifications
+            <FaExternalLinkAlt className="ml-2" size={14} />
+          </motion.a>
+        </div>
       </div>
     </section>
   );

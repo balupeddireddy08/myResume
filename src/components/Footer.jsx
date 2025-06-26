@@ -1,22 +1,15 @@
 import React from 'react';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
-  const socialLinks = {
-    github: 'https://github.com/balupeddireddy08',
-    linkedin: 'https://www.linkedin.com/in/bala-gopal-reddy-peddireddy/',
-    medium: 'https://medium.com/@balupeddireddy08',
-    youtube: 'https://www.youtube.com/@PEDDIREDDYBALAGOPALREDDY/videos'
-  };
-
   return (
-    <footer>
-      <div className="social-links">
-        <a href={socialLinks.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href={socialLinks.medium} target="_blank" rel="noopener noreferrer">Medium</a>
-        <a href={socialLinks.youtube} target="_blank" rel="noopener noreferrer">YouTube</a>
+    <footer className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-white p-4 text-center transition-colors duration-300">
+      <div className="flex justify-center space-x-4">
+        <a href="https://github.com/balupeddireddy08" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-300"><FaGithub size={24} /></a>
+        <a href="https://www.linkedin.com/in/bala-gopal-reddy-peddireddy/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-300"><FaLinkedin size={24} /></a>
+        <a href="mailto:balagopalreddypeddireddy@gmail.com" className="hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-300"><FaEnvelope size={24} /></a>
       </div>
-      <p>&copy; {new Date().getFullYear()} Peddireddy Bala Gopal Reddy. All rights reserved.</p>
+      <p className="mt-4 text-sm text-gray-700 dark:text-gray-300 transition-colors duration-300">&copy; {new Date().getFullYear()} P.B.G.R. All Rights Reserved.</p>
     </footer>
   );
 };
