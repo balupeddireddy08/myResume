@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaDownload, FaGraduationCap, FaBriefcase } from 'react-icons/fa';
 import profilePic from '../media/images/my_pic.png';
+import resumePdf from '../media/resume_bala_gopal_reddy_AI.pdf';
 
 const About = () => {
   return (
@@ -114,7 +115,7 @@ const About = () => {
 
         <div className="flex justify-center mt-12">
           <motion.a
-            href="/src/media/resume_bala_gopal_reddy_AI.pdf"
+            href={resumePdf}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center bg-gradient-to-r from-teal-500 to-emerald-600 text-white font-bold py-3 px-8 rounded-full"
