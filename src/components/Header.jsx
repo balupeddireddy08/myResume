@@ -18,10 +18,10 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <motion.a 
             href="#" 
-            className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500"
+            className="text-2xl font-bold text-teal-600 dark:text-teal-400"
             whileHover={{ scale: 1.05 }}
           >
-            BALA GOPAL REDDY PEDDIDERDY
+            BALA GOPAL REDDY PEDDIREDDY
           </motion.a>
 
           <div className="flex items-center space-x-6">
